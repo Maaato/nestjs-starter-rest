@@ -1,18 +1,17 @@
-
-## Description
+## Description 📋
 
 Simple CRUD RESTful API built with [NestJS](https://github.com/nestjs/nest).
 
-## Installation
+## Installation 🔧
 
-```bash
+```
 > npm install
 > insert your DB crendentials in .env file
 ```
 
-## Running the app
+## Running the app 🚀
 
-```bash
+```
 # dev mode
 $ npm run start
 
@@ -23,7 +22,7 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Example Usage
+## Example Usage 📌
 
 ```
 GET http://localhost:3000/users
@@ -82,12 +81,39 @@ POST http://localhost:3000/users
 ```
 
 ```
+{
+    "statusCode": 201,
+    "statusMsg": "CREATED",
+    "data": [
+        {
+            "firstName": "Jenny",
+            "lastName": "Cooke",
+            "isActive": false,
+            "id": 1
+        }
+    ]
+}
+```
+
+```
 PUT http://localhost:3000/users/2
 ```
 
 ```
 {
   "isActive": true
+}
+```
+```
+{
+    "statusCode": 200,
+    "statusMsg": "OK",
+    "data": {
+        "firstName": "Jenny",
+        "lastName": "Cooke",
+        "isActive": true,
+        "id": 2
+    }
 }
 ```
 
@@ -99,10 +125,5 @@ DELETE http://localhost:3000/users/2
 {
   "statusCode": 200,
   "statusMsg": "OK",
-  "data": "ID 1 Deleted"
 }
 ```
-
-## License
-
-  Nest is [MIT licensed](LICENSE).
